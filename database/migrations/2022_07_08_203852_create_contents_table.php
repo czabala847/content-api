@@ -18,8 +18,7 @@ class CreateContentsTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->string('image', 50);
             $table->string('title', 50);
-            $table->string('description', 50);
-            $table->string('url');
+            $table->string('description', 100);
             $table->text('content');
             $table->date('date_limit');
             $table->char('state', 1)->default('A');
