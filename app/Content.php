@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Content extends Model
 {
     protected $fillable = ['id', 'category_id', 'image', 'title', 'description', 'url', 'content', 'date_limit', 'state', 'created_at', 'updated_at'];
+    protected $hidden = array('category_id');
 
     public function category()
     {
