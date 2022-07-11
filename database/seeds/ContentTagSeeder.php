@@ -24,7 +24,6 @@ class ContentTagSeeder extends Seeder
         ContentTag::create(['content_id' => 4, 'tag_id' => 6]);
         ContentTag::create(['content_id' => 4, 'tag_id' => 7]);
         ContentTag::create(['content_id' => 5, 'tag_id' => 2]);
-        ContentTag::create(['content_id' => 5, 'tag_id' => 2]);
         ContentTag::create(['content_id' => 5, 'tag_id' => 7]);
         ContentTag::create(['content_id' => 5, 'tag_id' => 8]);
         ContentTag::create(['content_id' => 6, 'tag_id' => 9]);
