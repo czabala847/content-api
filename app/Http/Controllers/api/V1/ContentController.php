@@ -24,7 +24,8 @@ class ContentController extends Controller
             foreach ($contents as $contentItem) {
                 $category = Category::find($contentItem->category_id);
                 $contentItem["category"] = $category;
-                $tags = ContentTag::join('tags', 'content_tags.id', '=', 'tags.id')
+                $tags = ContentTag::join('tags', 'content_tags.tag_id', '=', 'tags.id')
+                    ->join('contents', 'content_tags.content_id', '=', 'contents.id')
                     ->where('content_id', $contentItem->id)
                     ->select('tags.name')
                     ->get();
