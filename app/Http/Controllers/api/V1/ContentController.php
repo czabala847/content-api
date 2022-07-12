@@ -59,4 +59,10 @@ class ContentController extends Controller
         $response = $this->formatResponse($contents);
         return $response;
     }
+
+    public function byName($name)
+    {
+        $contents = Content::where('title', 'like', '%' . $name . '%')->get();
+        return $this->formatResponse($contents);
+    }
 }

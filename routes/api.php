@@ -21,3 +21,4 @@ Route::get('/v1/category', 'api\V1\CategoryController@index');
 Route::get('/v1/content', 'api\V1\ContentController@index');
 Route::get('/v1/content/{content}', 'api\V1\ContentController@show');
 Route::get('/v1/content/category/{category}', 'api\V1\ContentController@byCategory');
+Route::get('/v1/content/name/{name}', 'api\V1\ContentController@byName');
